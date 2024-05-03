@@ -1,0 +1,89 @@
+Flex App - idea 
+
+Mobile App 
+Server 
+
+V1 -
+
+Server -  training plan creation - trainer 
+APP And daily update - user 
+
+Server - User authentication and profile management 
+
+App - Daily motivation notification 
+Gamification and user retention 
+
+Leaderboard - weekly, monthly and yearly 
+
+Self - streaks management 
+
+Body check- data 
+
+
+---
+Everyday Creation 
+
+Code 1 program logic
+Write 1 essay 
+Run 3 km 
+Make home food 
+Clean house at beginning and end of day 
+Plot your dreams into working plan 
+Reduce cola intake
+Do meditation and breathing exercise
+
+- Flex Research
+
+
+- From Floor plan : Create virtual Gym environment
+- On-Entry - Biometric authentication - Fingerprint + Face
+	- With Optical Flow - Track users across the virtual environment
+- Generate Heat Map of Users
+	- What equipment station is used for how long
+	- Help to track Calorie burn
+- On-device local processing
+    - How to process Realtime-Multi camera stream
+    - Build 3D live view of users - In animated form
+    - Anonymous usage provided to App users 
+- Authentication lists and session management
+- Using Agents - Simulate usage and efficiency of Gym with scheduling algorithm
+
+
+- Part of Health Management kit for Mars
+- Use Video Tracking logic for Robot in habitat - Video SLAM
+
+-- 
+
+Connect to gym equipment with fitness tracking. 
+
+Card based/rfid session management. 
+
+Activity and training session tracker 
+
+
+Health connectivity- IoT sensors 
+
+Registration- sign up forms automation 
+
+Website for flex fitness - register domian 
+
+
+- user Gamification 
+- monthly streak 
+- yearly streak 
+- current top streak 
+- Top streak of the year 
+
+Provide access control list - 
+User with QR code - check their status
+No personal identification 
+Username / user reg id 
+Show nice dashboard 
+
+Plus work out regimen.
+
+- 
+
+
+
+
