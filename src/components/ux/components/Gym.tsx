@@ -107,7 +107,7 @@ const modelsAndTools = [
 export default function Gym() {
   return (
     <>
-      <title>dwani.ai - Knowledge through Curiosity</title>
+      <title>Flex Fitness - Fitness for All</title>
       <meta
         name="description"
         content="Dwani is a GenAI platform offering voice interaction in Kannada and other Indian languages. Watch our video tutorials to explore the dwani.ai project and its features."
@@ -117,7 +117,7 @@ export default function Gym() {
         content="Dwani, Kannada AI, voice assistant, Indian languages, GenAI, video tutorials"
       />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <link rel="canonical" href="https://dwani.ai" />
+      <link rel="canonical" href="https://flex-fitness.club" />
 
       <Box
         id="hero"
@@ -161,7 +161,7 @@ export default function Gym() {
                 letterSpacing: '0.05em',
               }}
             >
-              dwani.ai
+              Flex Fitness
             </Typography>
             <Typography
               variant="h6"
@@ -172,7 +172,7 @@ export default function Gym() {
                 fontWeight: 'medium',
               }}
             >
-              Knowledge through Curiosity
+              Fitness for All
             </Typography>
           </Stack>
 
