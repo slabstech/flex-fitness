@@ -19,7 +19,7 @@ class About extends Component<AboutProps, AppState> {
       <div style={{ minHeight: "80vh", display: "flex", justifyContent: "center", alignItems: "center" }}>
       <Container>
         <Typography variant="h4" gutterBottom>
-          dwani.ai - Voice AI for Kannada
+          Flex Fitness
         </Typography>
         <Typography variant="body1" paragraph>
           <strong>What will dwani.ai Do ?</strong>

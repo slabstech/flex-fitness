@@ -21,7 +21,7 @@ import AppTheme from './components/ux/shared-theme/AppTheme';
 //import Blog from './components/ux/blog/Blog';
 //import Tutorials from './components/ux/components/Tutorials';
 //import IndicDocumentFeatures from './components/ux/components/IndicDocumentFeatures';
-import Research from './components/ux/components/Research';
+import Gym from './components/ux/components/Gym';
 //import API from './components/ux/components/API';
 
 const rootElement = document.getElementById('root');
@@ -36,7 +36,7 @@ if (rootElement) {
               <AppAppBar />
               <Routes>
                 
-                <Route path="/research" element={<Research />} />
+                <Route path="/gym" element={<Gym />} />
                 <Route
                   path="/"
                   element={

@@ -127,7 +127,7 @@ const features = [
 export default function Hero() {
   return (
     <>
-      <title>dwani.ai | Multimodal AI Platform</title>
+      <title>Flex Fitness | Fitness for All</title>
       <meta
         name="description"
         content="Discover dwani.ai, a GenAI platform for secure multimodal inference. Download the app on Google Play to explore voice translation, text-to-speech, and document summarization."
@@ -180,7 +180,7 @@ export default function Hero() {
                 textAlign: 'center',
               }}
             >
-              dwani.ai
+              Flex Fitness
             </Typography>
             <Typography
               variant="h6"
@@ -191,61 +191,10 @@ export default function Hero() {
                 fontWeight: 'medium',
               }}
             >
-              Knowledge from Curiosity
+              Fitness for All
             </Typography>
 
             <Divider sx={{ width: '60%', mx: 'auto', my: 2 }} />
-
-            <Typography
-              variant="body1"
-              sx={{ textAlign: 'center', color: 'text.secondary' }}
-            >
-              Secure Document Analytics for Proprietary Data
-            </Typography>
-
-            <Button
-              variant="contained"
-              color="primary"
-              href="https://app.dwani.ai"
-              target="_blank"
-              size="large"
-              sx={{ mt: 2, px: 4, py: 1.5, borderRadius: 2 }}
-              aria-label="Try Discovery on dwani.ai"
-            >
-              Try Discovery
-            </Button>
-
-            <Divider sx={{ width: '60%', mx: 'auto', my: 2 }} />
-
-            <Typography
-              variant="body1"
-              sx={{ textAlign: 'center', color: 'text.secondary' }}
-            >
-              Explore Multimodal Inference. Read the{' '}
-              <Link
-                href="https://docs.dwani.ai/"
-                target="_blank"
-                color="primary"
-                aria-label="dwani.ai documentation"
-              >
-                Documentation
-              </Link>.
-            </Typography>
-
-            <Button
-              variant="contained"
-              color="primary"
-              href="https://workshop.dwani.ai"
-              target="_blank"
-              size="large"
-              sx={{ mt: 2, px: 4, py: 1.5, borderRadius: 2 }}
-              aria-label="Try Multimodal Inference"
-            >
-              Try - Multimodal Inference
-            </Button>
-
-            <Divider sx={{ width: '60%', mx: 'auto', my: 2 }} />
-
 
             {/* Problem Section */}
             <Stack
@@ -258,7 +207,7 @@ export default function Hero() {
                 component="h3"
                 sx={{ textAlign: 'center', fontWeight: 'bold' }}
               >
-                The Problem - Security with AI
+                Why we need Fitness ?
               </Typography>
               <Grid container spacing={3}>
                 {problems.map((problem, index) => (
@@ -294,7 +243,7 @@ export default function Hero() {
                 component="h3"
                 sx={{ textAlign: 'center', fontWeight: 'bold' }}
               >
-                The Solution - dwani.ai’s Discovery
+                The Solution - Flex Fitness Club
               </Typography>
               <Grid container spacing={3}>
                 {solutions.map((solution, index) => (

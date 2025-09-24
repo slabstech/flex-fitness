@@ -49,8 +49,8 @@ export default function AppAppBar() {
   };
 
 
-  const handleResearchClick = () => {
-    navigate('/research');
+  const handleGymClick = () => {
+    navigate('/gym');
     toggleDrawer(false)();
   };
 
@@ -103,8 +103,8 @@ export default function AppAppBar() {
               <Button variant="text" color="info" size="small" onClick={handleHomeClick}>
                 Home
               </Button>
-              <Button variant="text" color="info" size="small" onClick={handleResearchClick}>
-                Research
+              <Button variant="text" color="info" size="small" onClick={handleGymClick}>
+                GYM
               </Button>
               <div style={{ display: 'none' }}>
               <Button variant="text" color="info" size="small" onClick={handleAPIClick}>
@@ -185,8 +185,8 @@ export default function AppAppBar() {
                   </Button>
                   </MenuItem>
                 <MenuItem>
-                  <Button color="primary" variant="contained" fullWidth onClick={handleResearchClick}>
-                    Research
+                  <Button color="primary" variant="contained" fullWidth onClick={handleGymClick}>
+                    Gym
                   </Button>
                 </MenuItem>
               <div style={{ display: 'none' }}>
