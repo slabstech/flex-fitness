@@ -138,7 +138,7 @@ export default function Hero() {
       />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="robots" content="index, follow" />
-      <link rel="canonical" href="https://dwani.ai" />
+      <link rel="canonical" href="https://flex-fitness.club" />
 
       <Box
         id="hero"

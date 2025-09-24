@@ -19,8 +19,8 @@ function Copyright() {
   return (
     <Typography variant="body2" sx={{ color: 'text.secondary', mt: 1 }}>
       {'Copyright © '}
-      <Link color="text.secondary" href="https://dwani.ai">
-        dwani.ai
+      <Link color="text.secondary" href="https://flex-fitness.club">
+        flex-fitness
       </Link>
       &nbsp;
       {new Date().getFullYear()}
