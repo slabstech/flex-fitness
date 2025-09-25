@@ -96,78 +96,46 @@ const solutions = [
   },
 ];
 
-const features = [
+const categories = [
   {
-    title: 'HIIT Exercise Classes',
-    description: 'High-Intensity Interval Training for maximum fat burn and endurance.',
-    components: 'Cardio',
-    hardware: 'All Levels',
-  },
-  {
-    title: 'Aerobics',
-    description: 'Fun, rhythmic workouts to improve cardiovascular health.',
-    components: 'Group Fitness',
-    hardware: 'Beginner Friendly',
-  },
-  {
-    title: 'Crossfit',
-    description: 'Functional high-intensity training with varied workouts.',
-    components: 'Strength & Conditioning',
-    hardware: 'Intermediate to Advanced',
-  },
-  {
-    title: 'Zumba',
-    description: 'Energetic dance fitness classes blending Latin rhythms.',
-    components: 'Dance Fitness',
-    hardware: 'All Levels',
-  },
-  {
-    title: 'Dance Fitness Classes',
-    description: 'Variety of dance styles for fun and effective calorie burning.',
-    components: 'Choreography',
-    hardware: 'Beginner to Advanced',
-  },
-  {
-    title: 'Private Lessons',
-    description: 'One-on-one sessions tailored to your fitness goals.',
-    components: 'Personalized',
-    hardware: 'Custom',
+    title: 'Group Fitness',
+    description: 'Energetic classes for all levels',
+    icon: <DirectionsRunOutlined color="primary" fontSize="large" />,
+    features: [
+      'HIIT Exercise Classes',
+      'Aerobics',
+      'Crossfit',
+      'Zumba',
+      'Dance Fitness Classes',
+    ],
   },
   {
     title: 'Personal Training',
-    description: 'Expert guidance from certified trainers for optimal results.',
-    components: 'Coaching',
-    hardware: 'Ongoing',
+    description: 'Tailored sessions for your goals',
+    icon: <SelfImprovementOutlined color="primary" fontSize="large" />,
+    features: [
+      'Private Lessons',
+      'Personal Training',
+      'Nutrition Consulting',
+    ],
   },
   {
-    title: 'Youth Sports',
-    description: 'Competitive and recreational sports for young athletes.',
-    components: 'Youth Development',
-    hardware: 'Ages 8-18',
+    title: 'Youth Programs',
+    description: 'Fun and fitness for kids',
+    icon: <PeopleOutlined color="primary" fontSize="large" />,
+    features: [
+      'Youth Sports',
+      'Youth Classes',
+    ],
   },
   {
-    title: 'Youth Classes',
-    description: 'Age-appropriate fitness and fun activities for kids.',
-    components: 'Kids Fitness',
-    hardware: 'Ages 5-12',
-  },
-  {
-    title: 'Yoga Classes',
-    description: 'Mindful practices for flexibility, strength, and relaxation.',
-    components: 'Wellness',
-    hardware: 'All Levels',
-  },
-  {
-    title: 'Weight Training',
-    description: 'Build muscle and strength with professional equipment.',
-    components: 'Resistance Training',
-    hardware: 'All Levels',
-  },
-  {
-    title: 'Nutrition Consulting',
-    description: 'Personalized diet plans and nutritional advice.',
-    components: 'Diet Support',
-    hardware: 'Ongoing',
+    title: 'Wellness',
+    description: 'Mind-body balance',
+    icon: <SpaOutlined color="primary" fontSize="large" />,
+    features: [
+      'Yoga Classes',
+      'Weight Training',
+    ],
   },
 ];
 
@@ -316,7 +284,7 @@ export default function Hero() {
             </Stack>
           </Stack>
 
-          {/* Features Section */}
+          {/* Categories Section */}
           <Stack
             spacing={4}
             useFlexGap
@@ -330,35 +298,33 @@ export default function Hero() {
               Our Classes & Services
             </Typography>
             <Grid container spacing={3}>
-              {features.map((feature, index) => (
-                <Grid size={{ xs: 12, sm: 6, md: 4, lg: 3 }} key={index}>
+              {categories.map((category, index) => (
+                <Grid size={{ xs: 12, sm: 6, md: 3 }} key={index}>
                   <FeatureCard tabIndex={0}>
+                    <Box sx={{ mb: 2 }}>{category.icon}</Box>
                     <Typography variant="h6" sx={{ fontWeight: 'medium' }}>
-                      {feature.title}
+                      {category.title}
                     </Typography>
                     <Typography
                       variant="body2"
-                      sx={{ color: 'text.secondary', mt: 1 }}
+                      sx={{ color: 'text.secondary', mt: 1, mb: 2 }}
                     >
-                      {feature.description}
+                      {category.description}
                     </Typography>
-                    <Stack
-                      direction="row"
-                      spacing={1}
-                      sx={{ mt: 2, justifyContent: 'center' }}
-                    >
-                      <Chip
-                        label={feature.components}
-                        color="primary"
-                        variant="outlined"
-                        size="small"
-                      />
-                      <Chip
-                        label={feature.hardware}
-                        color="secondary"
-                        variant="outlined"
-                        size="small"
-                      />
+                    <Stack spacing={0.5} sx={{ textAlign: 'left' }}>
+                      {category.features.map((feature) => (
+                        <Typography
+                          key={feature}
+                          variant="body2"
+                          sx={{
+                            color: 'text.primary',
+                            fontSize: '0.875rem',
+                            lineHeight: 1.4,
+                          }}
+                        >
+                          • {feature}
+                        </Typography>
+                      ))}
                     </Stack>
                   </FeatureCard>
                 </Grid>
