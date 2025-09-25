@@ -8,14 +8,13 @@ import Grid from '@mui/material/Grid2';
 import Divider from '@mui/material/Divider';
 import { styled } from '@mui/material/styles';
 import Chip from '@mui/material/Chip';
-import { SiGoogleplay } from 'react-icons/si';
 import {
-  SecurityOutlined,
-  LockOutlined,
-  GavelOutlined,
-  DocumentScannerOutlined,
-  LanguageOutlined,
-  VideoCameraFrontOutlined,
+  DirectionsRunOutlined,
+  SelfImprovementOutlined,
+  LocalHospitalOutlined,
+  FitnessCenterOutlined,
+  PeopleOutlined,
+  SpaOutlined,
 } from '@mui/icons-material';
 
 // Styled FeatureCard (unchanged from your original code)
@@ -58,69 +57,85 @@ const ProblemSolutionCard = styled(Box)(({ theme }) => ({
 // Data for Problem and Solution sections
 const problems = [
   {
-    text: 'Data sent to external AI providers for analysis',
-    icon: <SecurityOutlined color="error" fontSize="large" />,
-    chipLabel: 'Data Privacy',
+    text: 'Sedentary lifestyle leading to health issues',
+    icon: <LocalHospitalOutlined color="error" fontSize="large" />,
+    chipLabel: 'Health Risks',
   },
   {
-    text: 'Not secure or private by design',
-    icon: <LockOutlined color="error" fontSize="large" />,
-    chipLabel: 'Security Risk',
+    text: 'Lack of motivation and consistency',
+    icon: <SelfImprovementOutlined color="error" fontSize="large" />,
+    chipLabel: 'Motivation Gap',
   },
   {
-    text: 'Limited control over AI model behavior',
-    icon: <GavelOutlined color="error" fontSize="large" />,
-    chipLabel: 'Lack of Control',
+    text: 'Limited access to quality facilities',
+    icon: <FitnessCenterOutlined color="error" fontSize="large" />,
+    chipLabel: 'Access Barriers',
   },
 ];
 
 const solutions = [
   {
-    text: 'Analytics for large-scale documents and priority task identification',
-    icon: <DocumentScannerOutlined color="primary" fontSize="large" />,
-    chipLabel: 'Document Analytics',
+    text: 'Personalized workout plans and progress tracking',
+    icon: <FitnessCenterOutlined color="primary" fontSize="large" />,
+    chipLabel: 'Personal Training',
   },
   {
-    text: 'Self-hosted, multimodal inference with open-weight models',
-    icon: <LanguageOutlined color="primary" fontSize="large" />,
-    chipLabel: 'Self-Hosted AI',
+    text: 'State-of-the-art gym and equipment',
+    icon: <DirectionsRunOutlined color="primary" fontSize="large" />,
+    chipLabel: 'Modern Facilities',
   },
   {
-    text: 'Private, secure, auditable, and open-source',
-    icon: <LockOutlined color="primary" fontSize="large" />,
-    chipLabel: 'Secure & Open',
+    text: 'Community classes and group motivation',
+    icon: <PeopleOutlined color="primary" fontSize="large" />,
+    chipLabel: 'Community Focus',
   },
   {
-    text: 'Interact with documents, images, text, voice, and video',
-    icon: <VideoCameraFrontOutlined color="primary" fontSize="large" />,
-    chipLabel: 'Multimodal',
+    text: 'Yoga, cardio, and holistic wellness programs',
+    icon: <SpaOutlined color="primary" fontSize="large" />,
+    chipLabel: 'Holistic Fitness',
   },
 ];
 
-const features = [
+const categories = [
   {
-    title: 'PDF Query',
-    description: 'Seamlessly query content from PDF documents.',
-    components: 'Analytics',
-    hardware: 'GPU',
+    title: 'Group Fitness',
+    description: 'Energetic classes for all levels',
+    icon: <DirectionsRunOutlined color="primary" fontSize="large" />,
+    features: [
+      'HIIT Exercise Classes',
+      'Aerobics',
+      'Crossfit',
+      'Zumba',
+      'Dance Fitness Classes',
+    ],
   },
   {
-    title: 'Image Query',
-    description: 'Extract and query content from images.',
-    components: 'Vision',
-    hardware: 'GPU',
+    title: 'Personal Training',
+    description: 'Tailored sessions for your goals',
+    icon: <SelfImprovementOutlined color="primary" fontSize="large" />,
+    features: [
+      'Private Lessons',
+      'Personal Training',
+      'Nutrition Consulting',
+    ],
   },
   {
-    title: 'Voice AI',
-    description: 'Answer voice queries in Indian languages.',
-    components: 'LLM',
-    hardware: 'CPU/GPU',
+    title: 'Youth Programs',
+    description: 'Fun and fitness for kids',
+    icon: <PeopleOutlined color="primary" fontSize="large" />,
+    features: [
+      'Youth Sports',
+      'Youth Classes',
+    ],
   },
   {
-    title: 'Text to Speech',
-    description: 'Generate natural-sounding speech from text.',
-    components: 'TTS',
-    hardware: 'GPU',
+    title: 'Wellness',
+    description: 'Mind-body balance',
+    icon: <SpaOutlined color="primary" fontSize="large" />,
+    features: [
+      'Yoga Classes',
+      'Weight Training',
+    ],
   },
 ];
 
@@ -130,11 +145,11 @@ export default function Hero() {
       <title>Flex Fitness | Fitness for All</title>
       <meta
         name="description"
-        content="Discover dwani.ai, a GenAI platform for secure multimodal inference. Download the app on Google Play to explore voice translation, text-to-speech, and document summarization."
+        content="Discover Flex Fitness, a premier fitness club in Bengaluru, India. Join HIIT, Aerobics, Crossfit, Zumba, Yoga, Weight Training, Personal Training, Youth Classes, and more for holistic wellness."
       />
       <meta
         name="keywords"
-        content="dwani.ai, GenAI, multimodal AI, voice assistant, Indian languages, voice translation, document summarization, secure analytics"
+        content="Flex Fitness, Bengaluru fitness club, HIIT classes Bengaluru, Aerobics Bengaluru, Crossfit Bengaluru, Zumba classes, Dance fitness, Personal training Bengaluru, Youth sports, Yoga classes, Weight training, Nutrition consulting"
       />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="robots" content="index, follow" />
@@ -207,7 +222,7 @@ export default function Hero() {
                 component="h3"
                 sx={{ textAlign: 'center', fontWeight: 'bold' }}
               >
-                Why we need Fitness ?
+                Why We Need Fitness?
               </Typography>
               <Grid container spacing={3}>
                 {problems.map((problem, index) => (
@@ -269,7 +284,7 @@ export default function Hero() {
             </Stack>
           </Stack>
 
-          {/* Features Section */}
+          {/* Categories Section */}
           <Stack
             spacing={4}
             useFlexGap
@@ -280,38 +295,36 @@ export default function Hero() {
               component="h2"
               sx={{ textAlign: 'center', fontWeight: 'bold' }}
             >
-              Key Features
+              Our Classes & Services
             </Typography>
             <Grid container spacing={3}>
-              {features.map((feature, index) => (
+              {categories.map((category, index) => (
                 <Grid size={{ xs: 12, sm: 6, md: 3 }} key={index}>
                   <FeatureCard tabIndex={0}>
+                    <Box sx={{ mb: 2 }}>{category.icon}</Box>
                     <Typography variant="h6" sx={{ fontWeight: 'medium' }}>
-                      {feature.title}
+                      {category.title}
                     </Typography>
                     <Typography
                       variant="body2"
-                      sx={{ color: 'text.secondary', mt: 1 }}
+                      sx={{ color: 'text.secondary', mt: 1, mb: 2 }}
                     >
-                      {feature.description}
+                      {category.description}
                     </Typography>
-                    <Stack
-                      direction="row"
-                      spacing={1}
-                      sx={{ mt: 2, justifyContent: 'center' }}
-                    >
-                      <Chip
-                        label={feature.components}
-                        color="primary"
-                        variant="outlined"
-                        size="small"
-                      />
-                      <Chip
-                        label={feature.hardware}
-                        color="secondary"
-                        variant="outlined"
-                        size="small"
-                      />
+                    <Stack spacing={0.5} sx={{ textAlign: 'left' }}>
+                      {category.features.map((feature) => (
+                        <Typography
+                          key={feature}
+                          variant="body2"
+                          sx={{
+                            color: 'text.primary',
+                            fontSize: '0.875rem',
+                            lineHeight: 1.4,
+                          }}
+                        >
+                          • {feature}
+                        </Typography>
+                      ))}
                     </Stack>
                   </FeatureCard>
                 </Grid>
@@ -322,14 +335,13 @@ export default function Hero() {
           <Button
             variant="contained"
             color="primary"
-            href="https://play.google.com/store/apps/details?id=com.slabstech.dhwani.voiceai&pcampaignid=web_share"
+            href="https://wa.me/919876543210?text=Hi%20Flex%20Fitness%2C%20I'd%20like%20to%20join%20your%20club!"
             target="_blank"
             size="large"
             sx={{ mt: 4, px: 4, py: 1.5, borderRadius: 2 }}
-            aria-label="Download dwani.ai on Google Play"
-            startIcon={<SiGoogleplay size={24} />}
+            aria-label="Contact Flex Fitness via WhatsApp"
           >
-            Google Play
+            Join Now
           </Button>
 
           {/* Contact Section */}
@@ -350,25 +362,24 @@ export default function Hero() {
               variant="body1"
               sx={{ textAlign: 'center', color: 'text.secondary' }}
             >
-              Join our{' '}
+              Visit us at our Bengaluru location or{' '}
               <Link
-                href="https://discord.gg/9Fq8J9Gnz3"
-                target="_blank"
+                href="mailto:info@flex-fitness.club"
                 color="primary"
-                aria-label="Join dwani.ai Discord community"
+                aria-label="Email Flex Fitness"
               >
-                Discord community
+                email us
               </Link>{' '}
-              for collaborations.
+              for inquiries.
               <br />
-              Have questions?{' '}
+              Ready to start?{' '}
               <Link
-                href="https://calendar.app.google/j1L2Sh6sExfWpUTZ7"
+                href="https://calendar.app.google/YourCalendarLink"
                 target="_blank"
                 color="primary"
-                aria-label="Schedule a demo with dwani.ai"
+                aria-label="Schedule a free trial session"
               >
-                Schedule a Demo
+                Schedule a Free Trial
               </Link>.
             </Typography>
           </Stack>
